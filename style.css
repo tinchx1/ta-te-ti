@@ -4,31 +4,32 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 239, 155);
 }
 
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 120px);
     grid-gap: 5px;
 }
 
 /* Estilo para el tablero de juego */
 #tictactoe-board {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 120px);
     grid-gap: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
+    background-color: rgb(255, 239, 190); /* o #ffffff */
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
-    background-color: #eee;
+    width: 120px;
+    height: 120px;
+    background-color: #FFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,35 +39,22 @@ body {
 }
 
 
-#result-display {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    padding: 10px;
-}
 
 
-/* Estilo para el mensaje de resultado */
-#result-message {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-#result-message {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    background-color: aqua;
-}
+
 
 .info-display {
-    margin-bottom: 20px;
     font-size: 18px;
+    padding: 0 50px;
+    text-align: center;
+    font-weight: 700;
+    color: #45a049;
 }
 
 .reset-button {
     padding: 10px;
     font-size: 16px;
+    width: 360px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -76,7 +64,14 @@ body {
 
 .reset-button:hover {
     background-color: #45a049;
-}
 
+}
+h1 {
+    margin: 2rem 0 0 0;
+    font-size: 60px;
+    font-weight: bold;
+    color: #333333;
+    font-family: 'Quicksand', sans-serif;
+}
 /* Otros estilos personalizados según tu preferencia */
 

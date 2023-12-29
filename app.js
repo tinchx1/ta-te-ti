@@ -8,7 +8,6 @@ const juegoTateti = (function () {
             ['', '', ''],
             ['', '', '']
         ];
-
         // Método para obtener el estado actual del tablero
         const getBoard = () => board;
 
@@ -22,12 +21,18 @@ const juegoTateti = (function () {
         };
 
         const placeMark = (row, col, mark) => {
+            if (!board[row]) {
+                board[row] = ['', '', '']; // Crea la fila si no existe
+            }
+        
             if (board[row][col] === '') {
                 board[row][col] = mark;
                 return true; // Movimiento válido
             }
+        
             return false; // Movimiento inválido
         };
+        
 
         return {
             getBoard,
@@ -51,7 +56,7 @@ const juegoTateti = (function () {
         let playerO;
         let gameboard;
         let infoDisplay;
-
+        
         // Método para cambiar al siguiente jugador
         const switchPlayer = () => {
             currentPlayer = (currentPlayer === playerX) ? playerO : playerX;
@@ -203,6 +208,4 @@ const juegoTateti = (function () {
     };
 })();
 
-document.addEventListener('DOMContentLoaded', function () {
-    GameController.initializeGame();
-});
+
