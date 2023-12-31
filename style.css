@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
     display: flex;
@@ -44,11 +45,13 @@ body {
 
 
 .info-display {
-    font-size: 18px;
-    padding: 0 50px;
+    font-size: 30px;
+    padding: 0 2rem;
     text-align: center;
     font-weight: 700;
     color: #45a049;
+    width: 460px;
+    height: 2rem;
 }
 
 .reset-button {
@@ -67,11 +70,23 @@ body {
 
 }
 h1 {
-    margin: 2rem 0 0 0;
-    font-size: 60px;
+    margin: 0;
+    padding: 5rem 0 0 0;
+    font-size: 70px;
     font-weight: bold;
     color: #333333;
     font-family: 'Quicksand', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
 }
 /* Otros estilos personalizados según tu preferencia */
+@media screen and (max-width: 560px) {
+    h1 {
+        font-size: 34px; /* Tamaño de fuente del título ajustado para pantallas pequeñas */
+    }
 
+    .info-display {
+        max-width: 300px;
+        font-size: 18px; /* Tamaño de fuente del display de información ajustado para pantallas pequeñas */
+    }
+}
